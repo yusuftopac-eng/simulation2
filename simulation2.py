@@ -97,7 +97,7 @@ st.dataframe(
         'Boş Kalma Olasılığı (P0)': '{:.1%}',
         'Kuyruktaki İş (Lq)': '{:.2f}',
         'Kuyruk Süresi (Wq)': '{:.2f} Gün'
-    }).applymap(lambda x: 'background-color: #ffcccc' if x == "🛑 Kapasite Aşıldı!" else '', subset=['Durum'])
+    }).map(lambda x: 'background-color: #ffcccc' if x == "🛑 Kapasite Aşıldı!" else '', subset=['Durum'])
 )
 
 # Grafikler
